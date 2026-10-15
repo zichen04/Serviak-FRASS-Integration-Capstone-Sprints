@@ -5,7 +5,7 @@
 
 ## YouTube link of Sprint 1 Video
 
-TODO: Add the unlisted video URL after the team records and reviews the demo.
+https://youtu.be/pdK512Stfqs
 
 ## What's New (User Facing)
 
