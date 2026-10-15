@@ -1,4 +1,4 @@
-# Sprint 1 Report — FRASS–FVS Integration (TODO: sprint start and end dates)
+# Sprint 1 Report FRASS–FVS Integration Sept 11-Oct 11
 
 **Team:** WSU CptS Capstone Team 14 — Ziang Chen, Meshach Erisca, Tomas Stoker  
 **Client/sponsor:** D&D Larix, LLC / Dr. Bill Schlosser
