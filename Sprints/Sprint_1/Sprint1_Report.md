@@ -75,7 +75,8 @@ AI assistance was largely not used for this Sprint. In the times it was used, it
 - [#5 Remote access to Serviak](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/5) — Ziang.
 - [#6 Research and familiarize with R](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/6) — all three; individual resources and learning results still need to be recorded.
 - [#8 Requirements and Specifications section document](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/8) — all three; section assignments are listed in the issue description and contribution table above.
-
+- [#9 First FVS run using R and DLLs](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/9) — the local run succeeded. Record its commands and results, then confirm the issue's final status on the board.
+  
 These are documentation, access, and learning tasks, not implemented product user stories. The inspected issues have no linked pull requests or milestones; add any later review or submission links that the team actually creates.
 
 **Technical milestone:** The team completed a [first local FVS run through R](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/9). Add its commands, input and output evidence, and issue closeout status before final submission.
@@ -83,7 +84,7 @@ These are documentation, access, and learning tasks, not implemented product use
 ## Incomplete Issues/User Stories
 
 - [#11 Reproduce sample FVS run locally](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/11) — assigned to Ziang; open and in progress. Downloading the USFS package and using its interface to understand a sample run.
-- [#9 First FVS run using R and DLLs](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/9) — the local run succeeded. Record its commands and results, then confirm the issue's final status on the board.
+
 
 
 ## Code Files for Review
