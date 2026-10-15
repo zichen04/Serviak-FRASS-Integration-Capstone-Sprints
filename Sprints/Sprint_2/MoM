@@ -1,0 +1,76 @@
+# Minutes of Meeting — October 15, 2026
+
+**Project:** FRASS–FVS Integration and Automation Framework  
+**Team:** WSU CptS Capstone Team 14  
+**Client/sponsor:** D&D Larix, LLC / Dr. Bill Schlosser  
+**Attendees:** Dr. Bill Schlosser, Ziang Chen, Meshach Erisca, and Tomas Stoker  
+**Time:** 12:00–12:40 p.m. Pacific  
+**Location/platform:** Zoom  
+**Prepared:** October 15, 2026
+
+## Agenda and purpose
+
+Dr. Schlosser updated the team on his recent work and conversation with Dr. Nick Crookston. Discussed how Cruiser and GIS data could reach FVS through FRASS, what an FVS run should produce, and the next demonstrations to pursue.
+
+## Key discussion points
+
+### Recent work and guidance
+
+- Dr. Bill attending a forestry conference in Tacoma, where FRASS was presented.
+- Dr. Schlosser met with Dr. Crookston and suggested the team to follow the documents Dr. Crookston provided.
+- Meet with the other current capstone teams to clarify how data will pass between FRASS and FVS.
+- Our local R-driven FVS run is a starting point. Next goal is to run FVS on Serviak through the FRASS environment rather than only on a team member's computer. Working Serviak run was discussed as a goal for next week.
+
+### Input data and handoff
+
+- Flex Cruiser is the field-measurement mobile app being built by another capstone team. A cruiser uses it to record tree measurements such as species, diameter, height, and crown information. The plan is for those records to become structured data that this integration can use; the output format and SQLite handoff have not yet been verified. Also covered habitat type, site index, and selection of an FVS variant using location-related data. Team still needs to map which system supplies each field and how the values are derived.
+- Dr. Schlosser asked Jake to work on the Cruiser user type. The integration will need to combine mobile Cruiser data and GIS data for an FVS run.
+- The team should obtain the client's tree and stand data from OneDrive and inspect its structure. The discussion described making data such as site indexes available for FRASS to retrieve; it did not establish that those data are already downloaded into FRASS.
+- Some Cruiser measurements, such as stump height, may not be needed for a particular FVS input. Dr. Crookston's guidance, as relayed in the meeting, was to preserve the full data record and let FVS ignore fields it does not use. The exact import format and behavior still need to be checked in a sample run.
+- Preserve site-index values by species when supplied. FVS can accept species-specific site indexes in supported variants, so collapsing them to one value could lose information needed for a run.
+- The group discussed SQLite databases as the intended handoff format: other teams hope to provide their data in SQLite, and FVS results of interest will be read from SQLite tables. The mobile app's actual export and the exact table names, schemas, and conversion steps remain to be agreed with the other teams.
+
+### Runs and results
+
+- A useful first example is one stand using a Douglas-fir site index. The team needs to establish the full input, run, and output path for that example.
+- For the next sprint, the desired demonstration is a run on Serviak that accepts tree input and produces FVS results in the SQLite tables needed downstream. Reid's conversion work and SQL files in the demo were mentioned as examples to look at.
+- One example starts with inventory data from the 2010s and grows it to 2026. The resulting data are intended to feed Flex Taper.
+- A later “year zero” run would use current Cruiser and GIS measurements without growing the stand forward. It would establish the starting condition for analysis for cubic-foot volume estimates and Flex Taper calculations for that cruise.
+- The integration must return FVS results to FRASS, not just launch a run.
+
+### Data provenance
+
+- Cruiser measurements should be traceable to the person who collected them and to any third-party checker who verified them.
+- Dr. Schlosser said that mobile Cruiser elevation should take priority over GIS elevation when both are present, while acreage should come from GIS.
+
+## Decisions and clarifications recorded
+
+- Preserve the original Cruiser data, including measurements that are not used in a particular FVS run, and retain species-specific site indexes where available.
+- Use Cruiser elevation when there is also GIS elevation and use GIS acreage.
+- Treat a Serviak-hosted run, SQLite result handoff, and results returned to FRASS as the sprint 2 goal.
+
+## Follow-up topics and action items
+
+| Follow-up | Owner / timing recorded |
+| --- | --- |
+| follow Dr. Crookston's documents; identify the input requirements for a sample Douglas-fir stand run. | Team; no individual owner or due date assigned. |
+| Download and inspect the client's tree and stand data from onedrive, including species-specific site indexes. | Team; no individual owner or due date assigned. |
+| Move the R-driven FVS run from a local computer to Serviak and get its input and SQLite output. | Team goal for next week; no individual owner assigned. |
+| Compare Reid's demo SQL files and conversions with the FVS output tables required for FRASS and Flex Taper. | Team; next sprint discussion, no individual owner assigned. |
+| Define the Cruiser user type. | Dr. Schlosser reported asking Jake; due date not recorded. |
+| Clarify the third-party Cruiser checking process, provenance fields, and elevation/acreage conflict rules. | No owner or due date assigned. |
+| Plan a year-zero Cruiser/GIS run for cubic-foot volume and Flex Taper, after the basic run is working. | Desired before January 1; year and owner not recorded. |
+
+### Questions for Monday's meeting with the other teams
+
+1. What do the mobile app and GIS outputs look like (files, SQLite tables, fields, units, and identifiers)?
+2. How do those outputs compare with the inputs needed by FVS, and where will transformations happen?
+3. How will the teams hand data to FRASS/FVS and return results, including original measurements and verification information?
+
+## Linkage to project work
+
+The discussion informs input mapping, data provenance, a Serviak-hosted FVS run, SQLite result handling, and Flex Taper integration. The detailed schemas, year-zero behavior, and data-precedence rules should be confirmed with the client and partner teams before they are presented as completed requirements. See the [Sprint 1 report](../../Sprint_1/Sprint1_Report.md) for the prior local-run milestone.
+
+## Next steps and communication
+
+Monday meeting with the other capstone teams about data handoff. The immediate technical target is a sample FVS run on Serviak next week, followed by a next-sprint demonstration of producing usable SQLite output.
