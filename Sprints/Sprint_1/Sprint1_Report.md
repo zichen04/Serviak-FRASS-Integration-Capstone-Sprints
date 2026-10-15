@@ -35,18 +35,7 @@ We used technical meetings and the project's requirements assignment to map a pr
 
 The assignment also lists reliability, performance without storing every candidate, user-readable errors, and maintainable data contracts as nonfunctional requirements. The October 1 discussion raised user-supplied data and FVS reports as possible additional needs; their scope and acceptance criteria still need client confirmation.
 
-The proposed UC-01 activity is: request a projection → assemble an approved stand and settings → validate input → execute FVS → validate output → return results with lineage. Missing input or failed execution/output validation should stop the run and explain the problem. This draft diagram is for team/client review; it is not implemented architecture:
-
-```mermaid
-flowchart TD
-    A[User requests projection] --> B[Assemble approved stand and settings]
-    B --> C{Inputs valid?}
-    C -- No --> D[Explain missing or conflicting evidence]
-    C -- Yes --> E[Execute FVS through agreed interface]
-    E --> F{Execution and outputs valid?}
-    F -- No --> G[Report failure and discard invalid state]
-    F -- Yes --> H[Attach lineage and return results to FRASS]
-```
+The proposed UC-01 activity is: request a projection → assemble an approved stand and settings → validate input → execute FVS → validate output → return results with lineage. Missing input or failed execution/output validation should stop the run and explain the problem.
 
 ### Installation and evaluation of the existing system
 
