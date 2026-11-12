@@ -1,0 +1,147 @@
+
+
+     FOREST VEGETATION SIMULATOR     VERSION FS2026.1 -- PACIFIC NW COAST PROGNOSIS             RV:20260401    11-04-2026  21:39:56
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+                                                OPTIONS SELECTED BY INPUT
+
+KEYWORD FILE NAME: F:\FRASS_FVS\R_FVS\FVSTesting\bin\Debug\net10.0\year_zero
+----------------------------------------------------------------------------------------------------------------------------------
+KEYWORD    PARAMETERS:
+--------   -----------------------------------------------------------------------------------------------------------------------
+
+STDIDENT
+           STAND ID= Stand002                                           year_zero                                              
+
+ CARD NUM =    6; KEYWORD FIELD = 'NUMCYCLE'
+      PARAMETERS ARE:0.0000000000000.0000000000000.0000000000000.0000000000000.0000000000000.0000000000000.0000000000000.0000000000000.0000000000000.0000000000000.0000000000000.000000000000
+      COL 11 TO 130 ='         0                                                                                                              '
+
+********   FVS04 ERROR:  A REQUIRED PARAMETER IS MISSING OR A PARAMETER IS INCORRECT; KEYWORD IGNORED.
+
+DATABASE   DATABASE KEYWORDS:
+
+DSNIN      INPUT DATA BASE IS F:\FRASS_FVS\R_FVS\FVSTesting\bin\Debug\net10.0\FVS_Input.db
+
+STANDSQL   STANDSQL COMMAND FOR INPUT DATA BASE: F:\FRASS_FVS\R_FVS\FVSTesting\bin\Debug\net10.0\FVS_Input.db
+           SELECT * FROM FVS_StandInit WHERE Stand_ID = '%StandID%'
+
+           STAND-LEVEL DATA BASE READ:
+
+TREESQL    TREESQL COMMAND FOR INPUT DATA BASE: F:\FRASS_FVS\R_FVS\FVSTesting\bin\Debug\net10.0\FVS_Input.db
+           SELECT * FROM FVS_TreeInit WHERE Stand_ID = '%StandID%'
+           NUMBER ROWS PROCESSED:    0
+
+END        END OF DATA BASE OPTIONS.
+
+DATABASE   DATABASE KEYWORDS:
+
+********   FVS16 ERROR:  KEYWORD ENTERED IS USED IN WRONG CONTEXT AND WAS IGNORED.  RECORDS READ=  17
+
+           DSNOUT DATA BASE CAN NOT BE REDEFINED. DSN FOR OUTPUT REMAINS: FVSOut.db
+
+SUMMARY    SUMMARY VERSION 2 STATISTICS SENT TO DATABASE.
+
+COMPUTDB   COMPUTE VARIABLES SENT TO SPECIFIED DATABASE.
+           ADD NEW VARIABLES TO EXISTING TABLE: YES
+           INCLUDE VARIABLES STARTING WITH UNDERSCORE: NO 
+
+END        END OF DATA BASE OPTIONS.
+
+DELOTAB    TABLE NUMBER   1  SPECIFIED.  STAND COMPOSITION TABLE WILL BE DELETED.
+
+DELOTAB    TABLE NUMBER   2  SPECIFIED.  SAMPLE TREE TABLE WILL BE DELETED.
+
+DELOTAB    TABLE NUMBER   4  SPECIFIED.  ACTIVITY SCHEDULE TABLE WILL BE DELETED.
+
+
+            
+
+PROCESS    PROCESS THE STAND.
+
+********   FVS08 WARNING:  TOO FEW PROJECTABLE TREE RECORDS.  PROJECTABLE RECORDS: 0;
+                            TREE RECORDS:   0;  STAND ID: Stand002                  
+           (NOTREES OPTION IS AUTOMATICALLY INVOKED.)
+           (EZCRUISE OPTION IN REGENERATION ESTABLISHMENT MODEL IS AUTOMATICALLY INVOKED.)
+----------------------------------------------------------------------------------------------------------------------------------
+
+                                                OPTIONS SELECTED BY DEFAULT
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+TREEFMT    (I4,T1,I7,F6.0,I1,A3,F4.1,F3.1,2F3.0,F4.1,I1,3(I2,I2),2I1,I2,2I3,2I1,F3.0)      
+                                                                                           
+
+DESIGN     BASAL AREA FACTOR=   40.0; INVERSE OF FIXED PLOT AREA=  300.0; BREAK DBH=    5.0
+           NUMBER OF PLOTS=     1; NON-STOCKABLE PLOTS=     0; STAND SAMPLING WEIGHT=     1.00000
+           PROPORTION OF STAND CONSIDERED STOCKABLE=  1.000
+
+********   FVS03 WARNING:  FOREST CODE INDICATES THE GEOGRAPHIC LOCATION IS OUTSIDE THE RANGE OF THE MODEL.  DEFAULT CODE IS USED.
+
+********   FOREST CODE USED IN THIS PROJECTION IS 612
+
+********   FVS14 WARNING:  HABITAT/PLANT ASSOCIATION/ECOREGION CODE WAS NOT RECOGNIZED; HABITAT/PLANT ASSOCIATION/ECOREGION SET TO DEFAULT CODE.
+
+           PLANT ASSOCIATION CODE USED IN THIS PROJECTION IS CHS133  
+
+STDINFO    FOREST-LOCATION CODE=     612; HABITAT TYPE= 40; AGE=    0; ASPECT AZIMUTH IN DEGREES=   0.; SLOPE=   5.%
+           ELEVATION(100'S FEET)=  7.0;  REFERENCE CODE=     ; ECOREGION=           
+
+SPECIES      SF      WF      GF      AF      RF      SS      NF      YC      IC      ES
+SDI MAX      950     950     950     950     950     950     950     950     950     950
+
+SPECIES      LP      JP      SP      WP      PP      DF      RW      RC      WH      MH
+SDI MAX      950     950     950     950     950     950     950     950     950     950
+
+SPECIES      BM      RA      WA      PB      GC      AS      CW      WO      WJ      LL
+SDI MAX      950     950     950     950     950     950     950     950     950     950
+
+SPECIES      WB      KP      PY      DG      HT      CH      WI      __      OT
+SDI MAX      950     950     950     950     950     950     950     950     950
+
+*NOTE -- AT LEAST ONE DEFAULT MAXIMUM SDI EXCEEDED THE FOREST DEFAULT MAXIMUM. FOREST DEFAULT MAXIMUM OF  950. USED.
+          YOU MAY NEED TO SPECIFICALLY RESET VALUES FOR THESE SPECIES USING THE SDIMAX KEYWORD.
+
+                                  NATIONAL VOLUME ESTIMATOR LIBRARY EQUATION NUMBERS
+SPECIES  CUBIC FOOT BOARD FOOT SPECIES  CUBIC FOOT BOARD FOOT SPECIES  CUBIC FOOT BOARD FOOT SPECIES  CUBIC FOOT BOARD FOOT 
+------- ----------- ---------- ------- ----------- ---------- ------- ----------- ---------- ------- ----------- ---------- 
+  SF    616BEHW011  616BEHW011   WF    616BEHW015  616BEHW015   GF    616BEHW017  616BEHW017   AF    616BEHW019  616BEHW019
+  RF    616BEHW020  616BEHW020   SS    616BEHW098  616BEHW098   NF    616BEHW022  616BEHW022   YC    616BEHW042  616BEHW042
+  IC    616BEHW081  616BEHW081   ES    616BEHW093  616BEHW093   LP    616BEHW108  616BEHW108   JP    616BEHW116  616BEHW116
+  SP    616BEHW117  616BEHW117   WP    616BEHW119  616BEHW119   PP    616BEHW122  616BEHW122   DF    F00FW2W202  F00FW2W202
+  RW    616BEHW211  616BEHW211   RC    616BEHW242  616BEHW242   WH    F03FW2W263  F03FW2W263   MH    616BEHW264  616BEHW264
+  BM    616BEHW312  616BEHW312   RA    NVBM240351  NVBM240351   WA    616BEHW352  616BEHW352   PB    616BEHW375  616BEHW375
+  GC    616BEHW431  616BEHW431   AS    616BEHW746  616BEHW746   CW    616BEHW747  616BEHW747   WO    616BEHW815  616BEHW815
+  WJ    616BEHW064  616BEHW064   LL    616BEHW072  616BEHW072   WB    616BEHW101  616BEHW101   KP    616BEHW103  616BEHW103
+  PY    616BEHW231  616BEHW231   DG    616BEHW492  616BEHW492   HT    616BEHW500  616BEHW500   CH    616BEHW768  616BEHW768
+  WI    616BEHW920  616BEHW920   __    616BEHW000  616BEHW000   OT    616BEHW999  616BEHW999
+
+SITECODE   SITE INDEX INFORMATION:
+            SF=  139.;  WF=   98.;  GF=   98.;  AF=  139.;  RF=   98.;  SS=   98.;  NF=  139.;  YC=  139.; IC=  139.
+            ES=  139.;  LP=   98.;  JP=  139.;  SP=  139.;  WP=  139.;  PP=  139.;  DF=   98.;  RW=  139.; RC=   98.
+            WH=   98.;  MH=   28.;  BM=  104.;  RA=   49.;  WA=   90.;  PB=  209.;  GC=   97.;  AS=  104.; CW=  118.
+            WO=   96.;  WJ=   32.;  LL=   98.;  WB=   97.;  KP=  139.;  PY=   35.;  DG=   83.;  HT=   35.; CH=   70.
+            WI=   70.;  __=  139.;  OT=  139.
+           SITE SPECIES=DF CODE=   16
+
+INVENTORY POINT CROSS REFERENCE (FVS SEQUENTIAL POINT NUMBER = POINT NUMBER AS ENTERED IN THE INPUT DATA):
+  1=       0
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+     FOREST VEGETATION SIMULATOR     VERSION FS2026.1 -- PACIFIC NW COAST PROGNOSIS             RV:20260401    11-04-2026  21:39:56
+
+STAND ID: Stand002                      MGMT ID: NONE                     year_zero
+
+
+
+                                         SUMMARY STATISTICS (PER ACRE OR STAND BASED ON TOTAL STAND AREA)
+--------------------------------------------------------------------------------------------------------------------------------------------------
+                      START OF SIMULATION PERIOD                       REMOVALS               AFTER TREATMENT     GROWTH THIS PERIOD
+         --------------------------------------------------- ----------------------------- ---------------------  ------------------   MAI  ------
+         NO OF              TOP      TOTAL MERCH SAWLG MERCH NO OF TOTAL MERCH SAWLG MERCH              TOP  RES  PERIOD ACCRE MORT   MERCH FOR SS
+YEAR AGE TREES  BA  SDI CCF HT  QMD  CU FT CU FT CU FT BD FT TREES CU FT CU FT CU FT BD FT  BA  SDI CCF HT   QMD  YEARS   PER  YEAR   CU FT TYP ZT
+---- --- ----- --- ---- --- --- ---- ----- ----- ----- ----- ----- ----- ----- ----- ----- --- ---- --- --- ----  ------ ---- -----   ----- ------
+   0   0     0   0    0   0   0  0.0     0     0     0     0     0     0     0     0     0   0    0   0   0  0.0      10    0     0     0.0 999 55
+  10  10     0   0    0   0   0  0.0     0     0     0     0     0     0     0     0     0   0    0   0   0  0.0       0    0     0     0.0 999 55

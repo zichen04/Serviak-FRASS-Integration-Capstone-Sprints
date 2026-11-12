@@ -1,0 +1,4 @@
+num_cycles <- 1
+
+
+c:\FVS\FVSSoftware\R\R-4.5.0\bin\RScript
