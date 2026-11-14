@@ -1,0 +1,44 @@
+# Minutes of Meeting — October 26, 2026
+
+**Project:** FRASS–FVS Integration and Automation Framework  
+**Team:** WSU CptS Capstone Team 14  
+**Client/sponsor:** D&D Larix, LLC / Dr. Bill Schlosser  
+**Attendees:** Dr. Bill Schlosser, Ziang Chen, Meshach Erisca, Toams Stoker, and other FRASS project teams
+**Time:** 1:00–2:15 p.m. Pacific  
+**Location/platform:** Zoom  
+**Prepared:** November 14, 2026
+
+## Agenda and purpose
+
+Meeting with other FRASS teams to show how full project works together including mobile Flex Cruiser team, and modernization teams
+
+### Key discussion points
+
+#### Recent work and guidance
+-Year Zero run: baseline for GIS and Cruiser
+
+New Cruiser tab includes database uploads and connectivity status: this is a type of input for FVS simulation. 
+Connectivity allows for uploads from mobile source, stored in SQLite server
+
+Number of plots per timberstand = 5-40, stored in plots_per_acre, plot data is an array
+Measurements of Centroid for FVS: could be plot-by-plot: baseline pipeline passed
+
+Excel file FVS example on Onedrive, included example in Sprints/Spring_2/FVSTesting/FvsDatabaseExample.cs
+
+plots_per_stand calculated by cruiser not us. After upload from Cruiser, the data can be handled directly by integration
+accessed directly, include phone location as default or if applicatble override in low signal area for FVS variant code.
+
+When applicable, ground data > FRASS data for input. *Note: site index is required for most FVS variant, Inland Empire requires Habitat Type*
+
+For FVS output: store on SQL server, set timer for duration before removal
+if simulation is quick, only need to store year zero, and can rerun FVS to generate report
+
+Future may include options for "mid-run" change of parameters, contradicts the year zero storage only.
+
+Naming options suggestions:
+  timberstand
+  timestamp
+
+cubic_foot_volume is required for FLex Taper, validate FVS output for required fields.
+
+Full Field Demo scheduled for 12/4/2026 : Kamiak Butte, Inland Empire Variant
