@@ -1,11 +1,11 @@
-# Sprint 1 Report — FRASS–FVS Integration (TODO: sprint start and end dates)
+# Sprint 1 Report FRASS–FVS Integration Sept 11-Oct 11
 
 **Team:** WSU CptS Capstone Team 14 — Ziang Chen, Meshach Erisca, Tomas Stoker  
 **Client/sponsor:** D&D Larix, LLC / Dr. Bill Schlosser
 
 ## YouTube link of Sprint 1 Video
 
-TODO: Add the unlisted video URL after the team records and reviews the demo.
+https://youtu.be/pdK512Stfqs
 
 ## What's New (User Facing)
 
@@ -35,18 +35,7 @@ We used technical meetings and the project's requirements assignment to map a pr
 
 The assignment also lists reliability, performance without storing every candidate, user-readable errors, and maintainable data contracts as nonfunctional requirements. The October 1 discussion raised user-supplied data and FVS reports as possible additional needs; their scope and acceptance criteria still need client confirmation.
 
-The proposed UC-01 activity is: request a projection → assemble an approved stand and settings → validate input → execute FVS → validate output → return results with lineage. Missing input or failed execution/output validation should stop the run and explain the problem. This draft diagram is for team/client review; it is not implemented architecture:
-
-```mermaid
-flowchart TD
-    A[User requests projection] --> B[Assemble approved stand and settings]
-    B --> C{Inputs valid?}
-    C -- No --> D[Explain missing or conflicting evidence]
-    C -- Yes --> E[Execute FVS through agreed interface]
-    E --> F{Execution and outputs valid?}
-    F -- No --> G[Report failure and discard invalid state]
-    F -- Yes --> H[Attach lineage and return results to FRASS]
-```
+The proposed UC-01 activity is: request a projection → assemble an approved stand and settings → validate input → execute FVS → validate output → return results with lineage. Missing input or failed execution/output validation should stop the run and explain the problem.
 
 ### Installation and evaluation of the existing system
 
@@ -86,7 +75,8 @@ AI assistance was largely not used for this Sprint. In the times it was used, it
 - [#5 Remote access to Serviak](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/5) — Ziang.
 - [#6 Research and familiarize with R](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/6) — all three; individual resources and learning results still need to be recorded.
 - [#8 Requirements and Specifications section document](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/8) — all three; section assignments are listed in the issue description and contribution table above.
-
+- [#9 First FVS run using R and DLLs](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/9) — the local run succeeded. Record its commands and results, then confirm the issue's final status on the board.
+  
 These are documentation, access, and learning tasks, not implemented product user stories. The inspected issues have no linked pull requests or milestones; add any later review or submission links that the team actually creates.
 
 **Technical milestone:** The team completed a [first local FVS run through R](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/9). Add its commands, input and output evidence, and issue closeout status before final submission.
@@ -94,7 +84,7 @@ These are documentation, access, and learning tasks, not implemented product use
 ## Incomplete Issues/User Stories
 
 - [#11 Reproduce sample FVS run locally](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/11) — assigned to Ziang; open and in progress. Downloading the USFS package and using its interface to understand a sample run.
-- [#9 First FVS run using R and DLLs](https://github.com/zichen04/Serviak-FRASS-Integration-Capstone/issues/9) — the local run succeeded. Record its commands and results, then confirm the issue's final status on the board.
+
 
 
 ## Code Files for Review
